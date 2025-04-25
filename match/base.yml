@@ -1,0 +1,31 @@
+imports:
+  - "C:\\Users\\sempaitakoo\\AppData\\Roaming\\espanso\\match\\code.yml"
+
+matches:
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  - trigger: ":today"
+    replace: "{{today}}"
+    vars:
+      - name: today
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  - trigger: ":-"
+    replace: "—"
+
+  - trigger: ":<"
+    replace: "«"
+
+  - trigger: ":>"
+    replace: "»"
+
+  - trigger: "bg3"
+    replace: "baldur's gate 3"

@@ -1,0 +1,17 @@
+matches:
+  # (?P<name>exp)
+  - regex: ",,(?P<lang>\\w*),,"
+    replace: |
+      ```{{lang}}
+      {{clipb}}
+      ```
+    paragraph: true
+    vars:
+      - name: "clipb"
+        type: "clipboard"
+
+  - trigger: "ifname"
+    replace: "if __name__ == '__main__':"
+
+  - trigger: ":desk"
+    replace: "/mnt/c/Users/sempaitakoo/Desktop/"
