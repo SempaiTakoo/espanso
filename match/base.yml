@@ -29,3 +29,6 @@ matches:
 
   - trigger: "bg3"
     replace: "baldur's gate 3"
+
+  - trigger: "итд"
+    replace: "и т. д."
