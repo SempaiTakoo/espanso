@@ -15,3 +15,19 @@ matches:
 
   - trigger: ":desk"
     replace: "/mnt/c/Users/sempaitakoo/Desktop/"
+
+  - trigger: ":obs"
+    replace: "obsidian://adv-uri?vault=notes&filepath="
+
+  - trigger: ":uri"
+    replace: "{{output}}"
+    vars:
+      - name: clipb
+        type: clipboard
+      - name: output
+        type: script
+        params:
+          args:
+            - python
+            - "%CONFIG%/scripts/validate_uri.py"
+            - "{{clipb}}"
