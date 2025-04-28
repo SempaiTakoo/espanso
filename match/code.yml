@@ -31,3 +31,16 @@ matches:
             - python
             - "%CONFIG%/scripts/validate_uri.py"
             - "{{clipb}}"
+
+  - trigger: ":,"
+    replace: "{{output}}"
+    vars:
+      - name: clipb
+        type: clipboard
+      - name: output
+        type: script
+        params:
+          args:
+          - "%CONFIG%/scripts/.venv/Scripts/python.exe"
+          - "%CONFIG%/scripts/multiline_enumeration.py"
+          - "{{clipb}}"

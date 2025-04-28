@@ -1,5 +1,5 @@
 imports:
-  - "C:\\Users\\sempaitakoo\\AppData\\Roaming\\espanso\\match\\code.yml"
+  - "./code.yml"
 
 matches:
   - trigger: ":date"
